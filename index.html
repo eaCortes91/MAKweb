@@ -44,7 +44,7 @@
 
         <div class="prague-header-wrapper">
 
-            <div class="prague-navigation">
+            <div id="navi" class="prague-navigation">
                 <div class="pargue-navigation-wrapper">
                     <div class="prague-navigation-inner">
 
@@ -55,12 +55,12 @@
                                         href="index.html">MAK</a>
                                     
                                 </li>
-                                <li id="menu-item-2310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a
+                                <li id="menu-item-2310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a 
                                         href="#nosotros">Nosotros</a>
                                     
                                 </li>
                                 <li id="menu-item-2311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a
-                                        href="#productos">Productos</a>
+                                        href="#productos" class="sr-only">Productos</a>
                                     
                                 </li>
                                 <li id="menu-item-2316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a
@@ -293,8 +293,8 @@
 
                                             <div class="project-masonry-item-content">
 
-                                                <h4 class="project-masonry-item-title">Muebles</h4>
-                                                <div class="project-masonry-item-category">Daltile México</div>
+                                                <h4 class="project-masonry-item-title">Sanitarios</h4>
+                                                <div class="project-masonry-item-category">Castel</div>
 
                                             </div>
                                         </a>
@@ -353,7 +353,7 @@
 
                                             <div class="project-masonry-item-content">
 
-                                                <h4 class="project-masonry-item-title">Muebles baño</h4>
+                                                <h4 class="project-masonry-item-title">Lavabos y espejos</h4>
                                                 <div class="project-masonry-item-category">Castel</div>
 
                                             </div>
@@ -751,12 +751,20 @@
                 <div class="column colum-container col-sm-12 no-padd margin-lg-20b">
                     <div class="heading  left dark">
 
-                        <div class="subtitle " style="color: #d9ad26;">TARJETAS</div>
-                        <h2 class="title" style="color: #ab1d1b;">Aceptamos todas las tarjetas.</h2>
+                        <div class="subtitle " style="color: #d9ad26;">CRÉDITO Y DÉBITO</div>
+                        <h2 class="title" style="color: #ab1d1b;">Aceptamos todas las tarjetas de crédito y débito, para la realización de tus sueños.</h2>
                     </div>
                 </div>
 
-                <div class="no-padd-left no-padd-right margin-lg-20t">
+                <div class="row">
+                    <div class="col-md-6">
+                      <img src="img/Azulejos/CREDITO.png" class="img-fluid" alt="Imagen 1">
+                    </div>
+                    <div class="col-md-6">
+                      <img src="img/Azulejos/DEBITO.png" class="img-fluid" alt="Imagen 2">
+                    </div>
+                  </div>
+                <div hidden class="no-padd-left no-padd-right margin-lg-20t">
                     <div class="wrapper">
                         <div data-unique-key="139714cb2b9c35c987d2544328454258" class="js-load-more" data-start-page="1"
                             data-max-page="5" data-next-link="http://prague.loc/page/2/">
@@ -771,8 +779,9 @@
                                                 <img src="#" data-lazy-src="img/Azulejos/CREDITO.png" class="s-img-switch"
                                                     alt="seascape-villa image" />
                                             </div>
+                                            
 
-                                            <div class="project-list-content">
+                                            <div hidden class="project-list-content">
 
                                                 <div class="project-list-category" style="color: #d9ad26;">CRÉDITO</div>
                                                 <h3 class="project-list-title"><a target="_self" style="color: #ab1d1b;">TODAS LAS TARJETAS DE CRÉDITO</a></h3>
@@ -785,6 +794,7 @@
                                                     </a>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="project-list-item  column_paralax">
@@ -1025,6 +1035,19 @@
     <script src="js/foxlazy.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/all.js"></script>
+
+    <script>
+       // Obtener todos los elementos del menú
+var menuItems = document.querySelectorAll('.main-menu li a');
+
+// Agregar un evento de clic a cada elemento del menú
+menuItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    // Mostrar el menú después de hacer clic
+    document.getElementById('navi').style.display = 'none';
+  });
+});
+    </script>
 
 </body>
 
