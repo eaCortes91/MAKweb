@@ -42,7 +42,7 @@
                 <img src="img/logo.png" class="image_logo" alt="logo image" /> </a>
         </div>
 
-        <div class="prague-header-wrapper">
+        <div id="navi2" class="prague-header-wrapper">
 
             <div id="navi" class="prague-navigation">
                 <div class="pargue-navigation-wrapper">
@@ -84,8 +84,8 @@
 
 
             <!-- mobile icon -->
-            <div hidden class="prague-nav-menu-icon">
-                <a href="#">
+            <div   class="prague-nav-menu-icon">
+                <a id="navi3" href="#">
                     <i></i>
                 </a>
             </div>
@@ -1040,17 +1040,29 @@
     <script src="js/all.js"></script>
 
     <script>
-       // Obtener todos los elementos del menú
-var menuItems = document.querySelectorAll('.main-menu li a');
-
-// Agregar un evento de clic a cada elemento del menú
-menuItems.forEach(function(item) {
-  item.addEventListener('click', function() {
-    // Mostrar el menú después de hacer clic
-    document.getElementById('navi').style.display = 'none';
-  });
-});
-    </script>
+        // Obtener el elemento del botón del menú
+        var navMenuIcon = document.querySelector('.prague-nav-menu-icon');
+      
+        // Obtener el elemento del botón navi2
+        var navi2Button = document.getElementById('navi3');
+      
+        // Obtener todos los elementos del menú
+        var menuItems = document.querySelectorAll('.main-menu li a');
+      
+        // Función para simular un clic en el botón navi2
+        function clickNavi2Button() {
+          navi2Button.click();
+        }
+      
+        // Agregar un evento de clic a cada elemento del menú
+        menuItems.forEach(function(item) {
+          item.addEventListener('click', function() {
+            // Simular un clic en el botón navi2
+            clickNavi2Button();
+          });
+        });
+      </script>
+      
 
 </body>
 
