@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -274,7 +275,7 @@
 
                                             <div class="project-masonry-item-content">
 
-                                                <h4 class="project-masonry-item-title">Piso</h4>
+                                                <h4 class="project-masonry-item-title">Piso tipo madera</h4>
                                                 <div class="project-masonry-item-category">Castel</div>
 
                                             </div>
@@ -560,7 +561,7 @@
                 <p>En MAK Materiales y Acabados, nos enorgullece ofrecerte los complementos ideales y de 
                     la mejor calidad para complementar tus compras. Desde azulejos hasta grifería, contamos 
                     con una amplia gama de productos para satisfacer todas tus necesidades de construcción y decoración. </p>
-                <p>Descubre nuestra selección cuidadosamente seleccionada de complementos que agregarán el toque final perfecto 
+                <p>Descubre nuestros materiales de instalación que agregarán el toque final perfecto 
                     a tu proyecto. ¡Haz que cada detalle cuente con MAK Materiales y Acabados!.</p>
 
 
@@ -769,7 +770,7 @@
                 <div hidden class="no-padd-left no-padd-right margin-lg-20t">
                     <div class="wrapper">
                         <div data-unique-key="139714cb2b9c35c987d2544328454258" class="js-load-more" data-start-page="1"
-                            data-max-page="5" data-next-link="http://prague.loc/page/2/">
+                            data-max-page="5" data-next-link="https://prague.loc/page/2/">
                             <div class="row prague_list prague_count_col1 prague_gap_col10  no-footer-content no-figure prague-load-wrapper"
                                 data-columns="prague_count_col1" data-gap="prague_gap_col10">
                                 <div class="project-list-item">
@@ -897,7 +898,7 @@
             <div class="vc_column-inner no-padd-md">
                 <div class="prague-formidable  vc_formidable">
                     <div class="frm_forms  with_frm_style frm_style_formidable-style-2-2" id="frm_form_3_container">
-                        <form action="mailto:tucorreo@example.com" enctype="multipart/form-data" method="post" class="frm-show-form contact-us-form" id="form_jgd6s">
+                        <form  enctype="multipart/form-data" method="post" class="frm-show-form contact-us-form" id="formulario-contacto">
                             <div class="frm_form_fields ">
                                 <fieldset>
                                     <div class="frm_fields_container margin-md-0b">
@@ -913,16 +914,16 @@
                                             <div class="col-md-6 col-sm-6">
                                                 <div id="frm_field_15_container" class="frm_form_field form-field  frm_required_field frm_none_container">
 
-                                                    <input type="text" id="field_tgfdg" name="item_meta[15]" value=""
+                                                    <input type="text" id="nombre" name="nombre" value=""
                                                         placeholder="Nombre" data-reqmsg="This field cannot be blank."
-                                                        data-invmsg="Name is invalid" />
+                                                        data-invmsg="Name is invalid" required/>
 
 
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <div id="frm_field_16_container" class="frm_form_field form-field  frm_none_container">
-                                                    <input type="text" id="field_4bs9q" name="item_meta[16]" value=""
+                                                    <input type="text" id="telefono" name="telefono" value=""
                                                         placeholder="Teléfono" data-invmsg="Phone is invalid" />
 
 
@@ -930,14 +931,14 @@
                                             </div>
                                         </div>
                                         <div id="frm_field_17_container" class="frm_form_field form-field  frm_required_field frm_none_container">
-                                            <input type="email" id="field_1ghyp" name="item_meta[17]" value=""
+                                            <input type="email" id="email" name="email" value=""
                                                 placeholder="example@mail.com" data-reqmsg="This field cannot be blank."
                                                 data-invmsg="Email Address is invalid" />
 
 
                                         </div>
                                         <div id="frm_field_18_container" class="frm_form_field form-field  frm_none_container">
-                                            <textarea name="item_meta[18]" id="field_jy2v2" rows="5" placeholder="Mensaje"
+                                            <textarea name="mensaje" id="mensaje" rows="5" placeholder="Mensaje"
                                                 data-invmsg="Paragraph Text is invalid"></textarea>
 
                                         </div>
@@ -945,7 +946,7 @@
                                         <div class="frm_submit">
 
 
-                                            <input type="submit" value="Send" />
+                                            <input onclick="openMailClient()" type="submit" value="Enviar" />
                                             <span class="arrow-right"></span>
 
                                         </div>
@@ -971,7 +972,7 @@
                 <div class="prague-footer-main-block">
                     <div class="prague-logo">
                         <a href="index.html">
-                            <img src="#" data-lazy-src="img/logo.png" class="attachment-full size-full" alt="logo" />
+                            <img src="#" data-lazy-src="img/logo_2.png" class="attachment-full size-full" alt="logo" />
                         </a>
                     </div>
 
@@ -1065,6 +1066,15 @@
         });
       </script>
       
+      <script>
+        function openMailClient() {
+            var email = 'ventas@makmaterialesyacabados.com';
+            var subject = 'comprar material';
+            var body = document.getElementById('mensaje').value
+            var mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailtoLink;
+        }
+        </script>
 
 </body>
 
